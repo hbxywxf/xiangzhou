@@ -19,23 +19,9 @@
    		http://www.springframework.org/schema/task/spring-task-4.0.xsd
 		http://code.alibabatech.com/schema/dubbo        
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-
-	<!-- dubbo提供方配置 -->
-
-	<!-- dubbo服务名称 -->
-	<dubbo:application name="service-product"/>
-	<!-- 配置dubbo的注册中心 -->
-<!-- 	<dubbo:registry protocol="zookeeper" address="192.168.100.2:2181"/> -->
-	<!-- 直连 -->
-	<dubbo:registry  address="N/A"/>
-	<!-- 配置dubbo协议 -->
-	<dubbo:protocol name="dubbo" port="20880"/>
-	<!-- 配置暴露的服务 -->
-	<dubbo:service ref="bbsTestService" interface="cn.itcast.babasport.service.test.BbsTestService"/>
-	<dubbo:service ref="brandService" interface="cn.itcast.babasport.service.brand.BrandService"/>
-	<dubbo:service ref="uploadService" interface="cn.itcast.babasport.service.upload.UploadService"/>
-	<dubbo:service ref="productService" interface="cn.itcast.babasport.service.product.ProductService"/>
-	<dubbo:service ref="colorService" interface="cn.itcast.babasport.service.product.ColorService"/>
-	<dubbo:service ref="skuService" interface="cn.itcast.babasport.service.product.SkuService"/>
-
+		<!-- spring整合solr new HttpSolrServer(baseURL) -->
+		<bean id="solrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
+			<constructor-arg name="baseURL" value="http://192.168.200.128:8080/solr/"/>
+		</bean>
+	
 </beans>

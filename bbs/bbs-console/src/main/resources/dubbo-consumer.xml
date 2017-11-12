@@ -37,5 +37,11 @@
 						url="dubbo://127.0.0.1:20880"/>
 	<dubbo:reference id="uploadService" interface="cn.itcast.babasport.service.upload.UploadService" 
 						url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference id="productService" interface="cn.itcast.babasport.service.product.ProductService" 
+						url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference id="colorService" interface="cn.itcast.babasport.service.product.ColorService" 
+						url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference id="skuService" interface="cn.itcast.babasport.service.product.SkuService" 
+						url="dubbo://127.0.0.1:20880"/>
 	<dubbo:consumer timeout="6000000"/>
 </beans>

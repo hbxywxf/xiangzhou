@@ -2,6 +2,8 @@ package cn.itcast.babasport.pojo.product;
 
 import java.io.Serializable;
 
+import cn.itcast.babasport.utils.constant.BbsConstant;
+
 /**
  * 
  * @ClassName: Brand
@@ -22,7 +24,7 @@ public class Brand implements Serializable{
 		
 		//用于图片回显
 		public String getAllUrl(){
-			return "http://192.168.200.128/"+this.imgUrl;
+			return BbsConstant.IMG_URL+this.imgUrl;
 		}
 		
 		public Long getId() {

@@ -45,7 +45,7 @@
 	</select>
 	<input type="submit" class="query" value="查询"/>
 </form>
-<form action="jvForm">
+<form id="jvForm">
 <table cellspacing="1" cellpadding="0" border="0" width="100%" class="pn-ltable">
 	<thead class="pn-lthead">
 		<tr>
